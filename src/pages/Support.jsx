@@ -20,6 +20,7 @@ const Support = () => {
   const theme = useTheme();
 
   const handleStartDialog = async() => {
+    console.log({miniApp})
     await miniApp.openTelegramLink(`tg://resolve?domain=${supportUser}`);
   };
 
