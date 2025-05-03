@@ -5,7 +5,8 @@ import {
   Container, 
   Button,
   Paper,
-  useTheme
+  useTheme,
+  Typography
 } from '@mui/material';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 

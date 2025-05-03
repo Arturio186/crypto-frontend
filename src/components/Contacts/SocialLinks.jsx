@@ -2,10 +2,8 @@ import React from 'react';
 import { Box, Typography, IconButton } from '@mui/material';
 import {
   Telegram as TelegramIcon,
-  WhatsApp as WhatsAppIcon,
-  Twitter as TwitterIcon
+  WhatsApp as WhatsAppIcon
 } from '@mui/icons-material';
-import PublicIcon from '@mui/icons-material/Public';
 
 const SocialLinks = () => {
   return (
@@ -26,29 +24,19 @@ const SocialLinks = () => {
         
         <IconButton 
           color="primary" 
-          href="https://wa.me/78001234567" 
+          href="https://wa.me/79373090632" 
           target="_blank"
           aria-label="WhatsApp"
         >
           <WhatsAppIcon fontSize="large" />
         </IconButton>
-        
         <IconButton 
           color="primary" 
-          href="https://vk.com/cryptoapp" 
+          href="https://wa.me/79093477744" 
           target="_blank"
-          aria-label="VK"
+          aria-label="WhatsApp"
         >
-          <PublicIcon fontSize="large" />
-        </IconButton>
-        
-        <IconButton 
-          color="primary" 
-          href="https://twitter.com/cryptoapp" 
-          target="_blank"
-          aria-label="Twitter"
-        >
-          <TwitterIcon fontSize="large" />
+          <WhatsAppIcon fontSize="large" />
         </IconButton>
       </Box>
     </Box>

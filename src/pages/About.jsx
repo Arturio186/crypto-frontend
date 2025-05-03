@@ -68,7 +68,7 @@ const About = () => {
           <GroupsIcon fontSize="large" />
         </Avatar>
         <Typography variant="h4" component="h1" sx={{ fontWeight: 'bold' }}>
-          О нашей платформе
+          О нас
         </Typography>
       </Box>
 

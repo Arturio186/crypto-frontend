@@ -20,8 +20,7 @@ const Support = () => {
   const theme = useTheme();
 
   const handleStartDialog = async() => {
-    console.log({miniApp})
-    openTelegramLink(`tg://resolve?domain=${supportUser}`);
+    openTelegramLink(`https://t.me/${supportUser}`);
   };
 
   return (
@@ -50,20 +49,14 @@ const Support = () => {
               Мы всегда готовы помочь!
             </Typography>
           </Box>
-
+          
           <Typography paragraph>
-            Наша команда поддержки работает круглосуточно, чтобы решить любые ваши вопросы, 
-            связанные с работой платформы. Среднее время ответа составляет менее 15 минут.
-          </Typography>
-
-          <Typography paragraph>
-            Если у вас возникли проблемы с транзакциями, аккаунтом или у вас есть 
+            Если у вас возникли вопросы или у вас есть 
             предложения по улучшению сервиса - напишите нам, и мы оперативно поможем!
           </Typography>
 
           <Typography paragraph sx={{ fontWeight: 'medium' }}>
-            Вы можете связаться с нами через чат или по электронной почте: 
-            <Box component="span" color="primary.main"> support@cryptoapp.com</Box>
+            Вы можете связаться с нами через чат.
           </Typography>
         </Stack>
       </Paper>
