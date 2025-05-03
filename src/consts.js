@@ -1,1 +1,1 @@
-export const backendUrl = 'https://92.53.115.240:3000';
+export const backendUrl = 'https://api.arturio186-crypto-frontend-02c6.twc1.net';
