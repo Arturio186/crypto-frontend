@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { miniApp } from '@telegram-apps/sdk';
 import { 
   Box, 
   Container, 
