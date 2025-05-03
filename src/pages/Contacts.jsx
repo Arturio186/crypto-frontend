@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router-dom';
 import { 
   Box, 
   Container, 
-  Typography, 
   Button,
   Paper
 } from '@mui/material';
