@@ -6,16 +6,20 @@ import {
   Typography, 
   Button,
   Paper,
-  Stack
+  Stack,
+  useTheme
 } from '@mui/material';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import SupportAgentIcon from '@mui/icons-material/SupportAgent';
 
+const supportUser = 'crazysiberian86'
+
 const Support = () => {
   const navigate = useNavigate();
+  const theme = useTheme();
 
-  const handleStartDialog = () => {
-    console.log('Начат диалог с поддержкой');
+  const handleStartDialog = async() => {
+    await miniApp.openTelegramLink(`tg://resolve?domain=${supportUser}`);
   };
 
   return (
@@ -80,6 +84,17 @@ const Support = () => {
           Начать диалог
         </Button>
       </Box>
+
+      <Typography 
+        variant="body2" 
+        align="center" 
+        sx={{ 
+          mt: 3,
+          color: theme.palette.text.secondary
+        }}
+      >
+        © {new Date().getFullYear()} BashBTC
+      </Typography>
     </Container>
   );
 };

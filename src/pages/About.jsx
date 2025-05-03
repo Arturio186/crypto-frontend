@@ -8,34 +8,42 @@ import {
   Paper,
   Stack,
   Avatar,
-  Divider
+  Divider,
+  useTheme
 } from '@mui/material';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import GroupsIcon from '@mui/icons-material/Groups';
-import SecurityIcon from '@mui/icons-material/Security';
-import SpeedIcon from '@mui/icons-material/Speed';
-import CurrencyExchangeIcon from '@mui/icons-material/CurrencyExchange';
+import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
+import StarIcon from '@mui/icons-material/Star';
+import VerifiedUserIcon from '@mui/icons-material/VerifiedUser';
+import BusinessIcon from '@mui/icons-material/Business';
+
+const features = [
+  {
+    icon: <HelpOutlineIcon color="primary" sx={{ fontSize: 40 }} />,
+    title: "Экспертные консультации",
+    description: "Любой вопрос по криптовалютам - наши специалисты дадут развернутый ответ"
+  },
+  {
+    icon: <StarIcon color="primary" sx={{ fontSize: 40 }} />,
+    title: "Лидер рынка",
+    description: "Лучший сервис в городе"
+  },
+  {
+    icon: <VerifiedUserIcon color="primary" sx={{ fontSize: 40 }} />,
+    title: "Надежность",
+    description: "Безупречная репутация с 2019 года"
+  },
+  {
+    icon: <BusinessIcon color="primary" sx={{ fontSize: 40 }} />,
+    title: "Удобство",
+    description: "Современный и комфортный офис в центре города"
+  }
+];
 
 const About = () => {
   const navigate = useNavigate();
-
-  const features = [
-    {
-      icon: <SecurityIcon color="primary" sx={{ fontSize: 40 }} />,
-      title: "Безопасность",
-      description: "Используем банковский уровень шифрования и двухфакторную аутентификацию"
-    },
-    {
-      icon: <SpeedIcon color="primary" sx={{ fontSize: 40 }} />,
-      title: "Скорость",
-      description: "Среднее время обработки транзакции — менее 2 минут"
-    },
-    {
-      icon: <CurrencyExchangeIcon color="primary" sx={{ fontSize: 40 }} />,
-      title: "Доступность",
-      description: "Работаем с 20+ криптовалютами и фиатом"
-    }
-  ];
+  const theme = useTheme();
 
   return (
     <Container maxWidth="md" sx={{ py: 2 }}>
@@ -73,9 +81,11 @@ const About = () => {
         borderRadius: 2
       }}>
         <Typography paragraph sx={{ mb: 3 }}>
-          Мы — современная криптовалютная платформа, основанная в 2020 году. 
-          Наша миссия — сделать работу с цифровыми активами простой, безопасной 
-          и доступной для каждого.
+          «BashBTC» развивается в сфере криптовалют с 2019 года. 
+          Мы готовы проконсультировать вас по любым направлениям, связанным с криптовалютами. 
+          Офис расположен в Зеленой Роще, с удобной инфраструктурой. 
+          За время работы мы заслужили доверие, как профессионалы своего дела. 
+          Наши консультации подойдут руководителям, предпринимателям, майнерам, трейдерам и инвесторам.
         </Typography>
 
         <Divider sx={{ my: 3 }} />
@@ -109,13 +119,22 @@ const About = () => {
         <Divider sx={{ my: 3 }} />
 
         <Typography paragraph sx={{ fontStyle: 'italic', textAlign: 'center' }}>
-          "Более 500,000 пользователей по всему миру уже доверяют нам свои активы"
+          Компания BashBTC никогда не просит отправить криптовалюту или деньги заранее.<br />
+          Все консультации проходят в офисе. Для консультации, необходимо предварительно связаться с нами.<br />
+          Остерегайтесь мошенников!<br />
         </Typography>
       </Paper>
 
       {/* Дополнительная информация */}
-      <Typography variant="body2" color="text.secondary" textAlign="center">
-        © {new Date().getFullYear()} CryptoApp. Все права защищены.
+      <Typography 
+        variant="body2" 
+        align="center" 
+        sx={{ 
+          mt: 3,
+          color: theme.palette.text.secondary
+        }}
+      >
+        © {new Date().getFullYear()} BashBTC
       </Typography>
     </Container>
   );

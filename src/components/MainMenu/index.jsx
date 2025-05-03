@@ -52,7 +52,7 @@ const MainMenu = () => {
           color: theme.palette.text.primary
         }}
       >
-        CryptoApp
+        BashBTC
       </Typography>
 
       <Box sx={{ 
@@ -101,7 +101,7 @@ const MainMenu = () => {
           color: theme.palette.text.secondary
         }}
       >
-        © {new Date().getFullYear()} CryptoApp
+        © {new Date().getFullYear()} BashBTC
       </Typography>
     </Container>
   );

@@ -4,7 +4,8 @@ import {
   Box, 
   Container, 
   Button,
-  Paper
+  Paper,
+  useTheme
 } from '@mui/material';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
@@ -13,6 +14,7 @@ import SocialLinks from '../components/Contacts/SocialLinks';
 
 const Contacts = () => {
   const navigate = useNavigate();
+  const theme = useTheme();
 
   return (
     <Container maxWidth="md" sx={{ py: 2 }}>
@@ -43,7 +45,16 @@ const Contacts = () => {
       </Box>
       </Paper>
 
-      
+      <Typography 
+        variant="body2" 
+        align="center" 
+        sx={{ 
+          mt: 3,
+          color: theme.palette.text.secondary
+        }}
+      >
+        © {new Date().getFullYear()} BashBTC
+      </Typography>
     </Container>
   );
 };
