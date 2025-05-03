@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { miniApp } from '@telegram-apps/sdk';
+import { miniApp, openLink } from '@telegram-apps/sdk';
 import { 
   Box, 
   Container, 
@@ -21,7 +21,7 @@ const Support = () => {
 
   const handleStartDialog = async() => {
     console.log({miniApp})
-    await miniApp.openTelegramLink(`tg://resolve?domain=${supportUser}`);
+    openLink(`tg://resolve?domain=${supportUser}`);
   };
 
   return (
