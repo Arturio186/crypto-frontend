@@ -1,1 +1,1 @@
-export const backendUrl = 'https://api.arturio186-crypto-frontend-02c6.twc1.net';
+export const backendUrl = 'https://nikolaystore.ru';
