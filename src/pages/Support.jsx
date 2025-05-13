@@ -28,7 +28,7 @@ const Support = () => {
       {/* Кнопка назад */}
       <Button
         startIcon={<ArrowBackIcon />}
-        onClick={() => navigate(-1)}
+        onClick={() => navigate('/')}
         sx={{ mb: 1 }}
       >
         Вернуться
@@ -50,12 +50,12 @@ const Support = () => {
             </Typography>
           </Box>
           
-          <Typography paragraph>
+          <Typography>
             Если у вас возникли вопросы или у вас есть 
             предложения по улучшению сервиса - напишите нам, и мы оперативно поможем!
           </Typography>
 
-          <Typography paragraph sx={{ fontWeight: 'medium' }}>
+          <Typography sx={{ fontWeight: 'medium' }}>
             Вы можете связаться с нами через чат.
           </Typography>
         </Stack>

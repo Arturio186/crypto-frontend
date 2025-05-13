@@ -42,6 +42,7 @@ const Rate = () => {
         setExchangeRate({
           buy: data.buy || 0,
           sell: data.sell || 0,
+          base: data.base || 0,
           change: data.change || 0,
           lastUpdated: localDateString
         });
@@ -100,7 +101,7 @@ const Rate = () => {
                 Текущий курс
               </Typography>
               <Typography variant="h3" sx={{ fontWeight: 'bold' }}>
-                1 USDT = {exchangeRate.buy} ₽
+                1 USDT = {exchangeRate.base} ₽
               </Typography>
             </Box>
             
