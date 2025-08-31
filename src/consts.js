@@ -1,1 +1,1 @@
-export const backendUrl = 'https://nikolaystore.ru';
+export const backendUrl = 'http://localhost:5000/api';
