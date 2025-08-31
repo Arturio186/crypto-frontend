@@ -1,23 +1,13 @@
 import React, {useState, useEffect} from 'react';
-import { useNavigate } from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
 import axios from 'axios';
-import { 
-  Container, 
-  Button, 
-  Box, 
-  Typography, 
-  useTheme,
-  Paper,
-  Stack,
-  Grid
-} from '@mui/material';
-import ArrowBackIcon from '@mui/icons-material/ArrowBack';
-import TrendingUpIcon from '@mui/icons-material/TrendingUp';
-import PaidIcon from '@mui/icons-material/Paid';
-import SwapHorizIcon from '@mui/icons-material/SwapHoriz';
+import {Button, Box, Typography, Paper, Stack, Grid, useTheme} from '@mui/material';
+import {TrendingUp, Paid, SwapHoriz} from '@mui/icons-material';
 import CircularProgress from '@mui/material/CircularProgress';
+
 import {backendUrl} from '../consts';
 import {paths} from '../routes/paths';
+
 import Template from './Template';
 
 const Rate = () => {
@@ -53,34 +43,38 @@ const Rate = () => {
     })();
   }, []);
 
-    if (isLoading) {
-    return <Template content={
-      <Grid
-        container
-        spacing={0}
-        direction="column"
-        alignItems="center"
-        justify="center"
-      >
-        <CircularProgress />
-      </Grid>
-    } /> 
+  if (isLoading) {
+    return (
+      <Template content={
+        <Grid
+          container
+          spacing={0}
+          direction="column"
+          alignItems="center"
+          justify="center"
+        >
+          <CircularProgress />
+        </Grid>
+      } /> 
+    )
   }
 
   if (isError) {
-    return <Template content={
-      <Grid
-        container
-        spacing={0}
-        direction="column"
-        alignItems="center"
-        justify="center"
-      >
-        <Typography>
-          Ошибка при получении информации о курсе валют
-        </Typography>
-      </Grid>
-    } />
+    return (
+      <Template content={
+        <Grid
+          container
+          spacing={0}
+          direction="column"
+          alignItems="center"
+          justify="center"
+        >
+          <Typography>
+            Ошибка при получении информации о курсе валют
+          </Typography>
+        </Grid>
+      } />
+    )
   }
 
   return (
@@ -89,7 +83,7 @@ const Rate = () => {
         <>
           <Box sx={{ textAlign: 'center', mb: 3 }}>
             <Typography variant="h4" component="h1" sx={{ fontWeight: 'bold' }}>
-              <SwapHorizIcon color="primary" sx={{ fontSize: 40, verticalAlign: 'middle', mr: 1 }} />
+              <SwapHoriz color="primary" sx={{ fontSize: 40, verticalAlign: 'middle', mr: 1 }} />
               USDT/RUB
             </Typography>
           </Box>
@@ -123,7 +117,7 @@ const Rate = () => {
                   alignItems: 'center',
                   color: exchangeRate.change >= 0 ? 'success.main' : 'error.main'
                 }}>
-                  <TrendingUpIcon sx={{ mr: 1 }} />
+                  <TrendingUp sx={{ mr: 1 }} />
                   <Typography variant="h6">
                     {exchangeRate.change >= 0 ? '+' : ''}{exchangeRate.change}%
                   </Typography>
@@ -164,7 +158,7 @@ const Rate = () => {
             fullWidth
             variant="contained"
             size="large"
-            startIcon={<PaidIcon />}
+            startIcon={<Paid />}
             sx={{
               py: 2,
               borderRadius: 2,
@@ -175,17 +169,6 @@ const Rate = () => {
           >
             Обменять USDT/RUB
           </Button>
-
-          <Typography 
-            variant="body2" 
-            align="center" 
-            sx={{ 
-              mt: 3,
-              color: theme.palette.text.secondary
-            }}
-          >
-            © {new Date().getFullYear()} BashBTC
-          </Typography>
         </>
       }
     />

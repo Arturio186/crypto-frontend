@@ -7,7 +7,6 @@ import {
   Button,
   Paper,
   Stack,
-  useTheme,
   Grid
 } from '@mui/material';
 import SupportAgentIcon from '@mui/icons-material/SupportAgent';
@@ -20,8 +19,6 @@ const Support = () => {
   const [operator, setOperator] = useState('');
   const [isLoading, setIsLoading] = useState(true);
   const [isError, setIsError] = useState(false);
-
-  const theme = useTheme();
 
   useEffect(() => {
     (async () => {
@@ -36,7 +33,6 @@ const Support = () => {
 
         setOperator(operator);
       } catch (err) {
-        console.log(err)
         setIsError(true);
       } finally {
         setIsLoading(false);
@@ -125,17 +121,6 @@ const Support = () => {
             Начать диалог
           </Button>
         </Box>
-
-        <Typography 
-          variant="body2" 
-          align="center" 
-          sx={{ 
-            mt: 3,
-            color: theme.palette.text.secondary
-          }}
-        >
-          © {new Date().getFullYear()} BashBTC
-        </Typography>
       </>
     } />
   );
