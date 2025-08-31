@@ -1,5 +1,7 @@
 import axios from 'axios';
 import React, {useState, useEffect} from 'react';
+import {retrieveLaunchParams} from '@telegram-apps/sdk';
+
 import {Box, Typography, TextField, MenuItem, Button, RadioGroup, FormControlLabel, Radio, Grid} from '@mui/material';
 import CircularProgress from '@mui/material/CircularProgress';
 
@@ -142,6 +144,8 @@ const Exchange = () => {
       return;
     }
 
+    //const { initData } = retrieveLaunchParams();
+
     const application = {
       time: formData.time,
       network: formData.network,
@@ -149,7 +153,7 @@ const Exchange = () => {
       type: parseInt(formData.type),
       address: formData.address,
       date: formData.date,
-      tg_username: 'crazysiberian86'
+      tg_username: 'aa' // initData.user.username
     };
 
     (async() => {
